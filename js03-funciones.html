@@ -8,12 +8,13 @@
 			var fac=1;
 			for(ind=num;ind>0;ind--)
 				fac=fac*ind;
+			document.getElementById("result").innerHTML = fac;
 			/*
 			for(num;num>0;num--)
 			*/
 			return fac;
 		}
-		alert(factorial(6));
+		//alert(factorial(6));
 
 		/* Otro modo de declarar funciones
 		var factorial=function(num){
@@ -27,5 +28,9 @@
 	</script>
 </head>
 <body>
+<p>Calcula el factorial del número que quieras</p>
+<input type="text" name="num" id="num" placeholder="Ej: 7"/>
+<button onclick="factorial(document.getElementById('num').value)">Calcular</button>
+<p id="result"></p>
 </body>
 </html>

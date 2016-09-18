@@ -4,18 +4,26 @@
 	<meta charset="utf-8">
 	<script type="text/javascript">
 	var cierto=true;
-	var asignada=cierto?'hola':'adios';
-	alert(asignada);
-	/*
-	switch(variable)
-	{	case 1: codigo
-			break;
-		case 2: codigo
-			break;
-		default:
-		}
-	*/
+	//var asignada=cierto?'hola':'adios';
+	
+	function saluda(saludo) {
+		switch(saludo)
+		{	case true: document.getElementById("content").innerHTML = "¡Te saludo!- Hola amigo!";
+				break;
+			case false: document.getElementById("content").innerHTML = "¡Hasta luego lucas!";
+				break;
+			default:
+			}
+	}
+
 	</script>
 </head>
-<body></body>
+<body>
+<p> En este ejemplo utilizo el condicional switch para mostrar el saludo o despedida según el botón que pulses</p>
+<button onclick="saluda(true)">Saluda</button>
+<button onclick="saluda(false)">Despide</button>
+
+	<p id="content"></p>
+
+</body>
 </html>

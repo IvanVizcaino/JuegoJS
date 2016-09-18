@@ -4,14 +4,24 @@
 	<meta charset="utf-8">
 	<title>Objetos</title>
 	<script type="text/javascript">
-		var gato = new Gato("peludo");
-		function Gato(nombre){
-			this.nombre=nombre;
+		var gato = new Gato("peludo","Siames",10);
+		function Gato(nombre, raza, edad){
+			this.nombre = nombre;
+			this.raza = raza;
+			this.edad = edad;
 		}
-		alert(gato.nombre);
-		alert(gato);
+		document.write(gato.nombre);
+		document.write(gato);
 
 		//Comprueba el objeto en la consola del navegador
+		/*
+			Salida de la consola:
+				Gato {nombre: "peludo", raza: "Siames", edad: 10}
+			edad:10
+			nombre:"peludo"
+			raza:"Siames"
+			__proto__:Object
+		*/
 	</script>
 </head>
 <body>

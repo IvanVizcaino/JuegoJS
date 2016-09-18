@@ -4,29 +4,39 @@
 	<meta charset="utf-8">
 		<script type="text/javascript">
 		window.addEventListener("load",function(){
-			alert("La página se ha cargado");
+			alert("Enhorabuena, es el visitante 200. ¡Otro perrito piloto! \n Por cierto, la página ha cargado");
 		});
 		window.addEventListener("keydown",teclaPulsada);
 		function botonClick(evento){
-			alert("Hola colega");
-			alert(evento.type);
-			alert(evento.screenX);
+			alert("No me gustan los alert, pero estos son los eventos:");
+			document.getElementById('eventos').innerHTML = "<li>"+(evento.type)+"</li>";
+			document.getElementById('eventos').innerHTML = "<li>"+(evento.screenX)+"</li>";
 			/* boton.removeEventListener("click",botonClick) */
 		};
 		function teclaPulsada(evento)
 		{
 			alert(evento.keyCode);
 		}
+		window.addEventListener("click",premio);
+		function premio()
+		{
+			document.write("<img src='http://www.yupifotos.com/download.php?attachid=7632'/>");
+		}
 	</script>	
 </head>
 <body>
 	<button id='miBoton'>Haz click aquí</button>
+	<button id='premio'>Obtener Premio</button>
 	
 	<script type="text/javascript">
 		var boton=document.getElementById('miBoton');
 		boton.addEventListener('click', botonClick);
+		
+		var premio=document.getElementById('premio');
+		premio.addEventListener('click', premio);
 
 	</script>
+	<div id="eventos"></div>
 
 </body>
 </html>
